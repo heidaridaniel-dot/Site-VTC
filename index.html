@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chauffeur Privé VTC Courbevoie | Reservation en Ligne</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --gold: #c5a059;
+            --light: #f8f9fa;
+            --dark: #111111;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .card h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #b08d4b;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-item {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Chauffeur Privé VTC</div>
+        <nav>
+            <a href="#reservation">Réservation</a>
+            <a href="#services">Services</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Votre Chauffeur VTC à Courbevoie & Île-de-France</h1>
+        <p>Transferts Aéroports (CDG, Orly), Gares et Déplacements Professionnels</p>
+    </section>
+
+    <div class="container">
+        <!-- Formulaire de Réservation -->
+        <div class="card" id="reservation">
+            <h2>Réserver votre trajet</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="departure">Adresse de départ</label>
+                    <input type="text" id="departure" name="departure" placeholder="Ex: Courbevoie, Gare de Lyon, CDG..." required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Adresse d'arrivée</label>
+                    <input type="text" id="destination" name="destination" placeholder="Ex: Aéroport Roissy CDG, Paris..." required>
+                </div>
+                <div class="form-group">
+                    <label for="datetime">Date et heure de prise en charge</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Nombre de passagers</label>
+                    <select id="passengers" name="passengers">
+                        <option value="1">1 Passager</option>
+                        <option value="2">2 Passagers</option>
+                        <option value="3">3 Passagers</option>
+                        <option value="4">4 Passagers</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Confirmer la demande de réservation</button>
+            </form>
+        </div>
+
+        <!-- Services -->
+        <div class="card" id="services">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Transferts Aéroports</h3>
+                    <p>Prise en charge personnalisée à Roissy CDG, Orly et Beauvais avec suivi des vols.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Trajets Professionnels</h3>
+                    <p>Déplacements vers La Défense, Paris et toute la région parisienne en toute sérénité.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Mise à disposition</h3>
+                    <p>Chauffeur dédié à l'heure ou à la journée pour vos événements et rendez-vous business.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Service VTC Courbevoie - Tous droits réservés.</p>
+    </footer>
+
+</body>
+  </html>
+  
